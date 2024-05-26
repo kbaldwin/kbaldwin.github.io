@@ -4389,3 +4389,117 @@ StatesData.data = {
     },
   ],
 };
+
+function setStateProperties(stateName, newStateProperties) {
+  var stateFeature = StatesData.data.features.find(
+    (feature) => feature.properties["name"] == stateName
+  );
+  if (stateFeature) {
+    Object.assign(stateFeature.properties, newStateProperties);
+  }
+}
+
+setStateProperties("Alaska", { eventType: "none", length: "13.1" });
+setStateProperties("Alabama", { eventType: "run", length: "13.1" });
+setStateProperties("Arkansas", { eventType: "none", length: "13.1" });
+setStateProperties("Arizona", {
+  eventName: "Boneyard Half Marathon",
+  eventType: "run",
+  length: "13.1",
+});
+setStateProperties("California", { eventType: "run", length: "13.1" });
+setStateProperties("Colorado", { eventType: "run", length: "13.1" });
+setStateProperties("Connecticut", { eventType: "run", length: "13.1" });
+setStateProperties("District of Columbia", {
+  eventName: "Rock n Roll Half Marathon",
+  eventType: "run",
+  length: "13.1",
+});
+setStateProperties("Delaware", { eventType: "run", length: "13.1" });
+setStateProperties("Florida", {
+  eventName: "Disney Marathon",
+  eventType: "run",
+  length: "26.2mi",
+});
+setStateProperties("Georgia", { eventType: "run", length: "13.1" });
+setStateProperties("Guam", { eventType: "none" });
+setStateProperties("Hawaii", {
+  eventName: "Maui Half Marathon",
+  eventType: "run",
+  length: "13.1mi",
+});
+setStateProperties("Iowa", { eventType: "run", length: "13.1" });
+setStateProperties("Idaho", { eventType: "none", length: "13.1" });
+setStateProperties("Illinois", { eventType: "run", length: "13.1" });
+setStateProperties("Indiana", { eventType: "none", length: "13.1" });
+setStateProperties("Kansas", { eventType: "none", length: "13.1" });
+setStateProperties("Kentucky", { eventType: "none", length: "13.1" });
+setStateProperties("Louisiana", { eventType: "run", length: "13.1" });
+setStateProperties("Massachusetts", { eventType: "run", length: "13.1" });
+setStateProperties("Maryland", { eventType: "run", length: "13.1" });
+setStateProperties("Maine", { eventType: "none", length: "13.1" });
+setStateProperties("Michigan", { eventType: "none", length: "13.1" });
+setStateProperties("Minnesota", {
+  eventName: "Twin Cities Half Marathon",
+  eventType: "run",
+  length: "13.1mi",
+});
+setStateProperties("Missouri", { eventType: "none", length: "13.1" });
+setStateProperties("Mississippi", { eventType: "run", length: "13.1" });
+setStateProperties("Montana", {
+  eventName: "Billings Half Marathon",
+  eventType: "run",
+  length: "13.1mi",
+});
+setStateProperties("North Carolina", { eventType: "run", length: "13.1" });
+setStateProperties("North Dakota", { eventType: "none", length: "13.1" });
+setStateProperties("Nebraska", { eventType: "none", length: "13.1" });
+setStateProperties("New Hampshire", { eventType: "run", length: "13.1" });
+setStateProperties("New Jersey", { eventType: "run", length: "13.1" });
+setStateProperties("New Mexico", {
+  eventName: "The Great Balloon Chase Half Marathon",
+  eventType: "run",
+  length: "13.1mi",
+});
+setStateProperties("Nevada", { eventType: "run", length: "13.1" });
+setStateProperties("New York", {
+  eventName: "New York Marathon",
+  eventType: "run",
+  length: "26.2mi",
+});
+setStateProperties("Ohio", { eventType: "run", length: "13.1" });
+setStateProperties("Oklahoma", { eventType: "none", length: "13.1" });
+setStateProperties("Oregon", {
+  eventName: "Bridge of the Gods Half Marathon",
+  eventLink: "https://www.bridgeofthegodsrun.com/",
+  eventType: "run",
+  eventDate: "",
+  length: "13.1mi",
+});
+setStateProperties("Pennsylvania", {
+  eventName: "Lehigh Valley Marathon",
+  eventType: "run",
+  length: "13.1mi",
+});
+setStateProperties("Puerto Rico", { eventType: "run", length: "0" });
+setStateProperties("Rhode Island", {
+  eventName: "Run the Block",
+  eventType: "run",
+  length: "15k",
+});
+setStateProperties("South Carolina", { eventType: "run", length: "13.1" });
+setStateProperties("South Dakota", { eventType: "none", length: "0" });
+setStateProperties("Tennessee", { eventType: "none", length: "0" });
+setStateProperties("Texas", { eventType: "run", length: "13.1" });
+setStateProperties("Utah", {
+  eventName: "Zion Half Marathon",
+  eventType: "run",
+  length: "13.1",
+});
+setStateProperties("Virginia", { eventType: "run", length: "13.1" });
+setStateProperties("Virgin Islands", { eventType: "none", length: "13.1" });
+setStateProperties("Vermont", { eventType: "run", length: "13.1" });
+setStateProperties("Washington", { eventType: "none", length: "0" });
+setStateProperties("Wisconsin", { eventType: "run", length: "13.1" });
+setStateProperties("West Virginia", { eventType: "tri", length: "0" });
+setStateProperties("Wyoming", { eventType: "none", length: "0" });

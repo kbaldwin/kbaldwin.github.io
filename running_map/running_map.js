@@ -3,13 +3,6 @@ import StateData from "./states_data.js";
 // default settings for U.S.
 var map = L.map("map").setView([38.68, -98], 4);
 
-console.log(StateData.data["type"]);
-
-// map.on("moveend", function () {
-//   console.log(map.getCenter().toString());
-//   console.log(map.getZoom().toString());
-// });
-
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
   attribution:
@@ -18,27 +11,18 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 var stateGeojson;
 
-function getStateColor(d) {
-  return d > 1000
-    ? "#800026"
-    : d > 500
-    ? "#BD0026"
-    : d > 200
-    ? "#E31A1C"
-    : d > 100
-    ? "#FC4E2A"
-    : d > 50
-    ? "#FD8D3C"
-    : d > 20
-    ? "#FEB24C"
-    : d > 10
-    ? "#FED976"
-    : "#FFEDA0";
+function getStateColor(stateProperties) {
+  if (stateProperties.eventType == "run") {
+    return "#800026";
+  } else if (stateProperties.eventType == "none") {
+    return "#999999";
+  }
+  return stateProperties.density > 1000 ? "#800026" : "#FFEDA0";
 }
 
 function stateStyle(feature) {
   return {
-    fillColor: getStateColor(feature.properties.density),
+    fillColor: getStateColor(feature.properties),
     weight: 2,
     opacity: 1,
     color: "white",
@@ -51,10 +35,10 @@ function stateHighlightState(e) {
   var layer = e.target;
 
   layer.setStyle({
-    weight: 5,
-    color: "#666",
+    weight: 2,
+    color: "#888888",
     dashArray: "",
-    fillOpacity: 0.7,
+    fillOpacity: 0.5,
   });
 
   layer.bringToFront();
